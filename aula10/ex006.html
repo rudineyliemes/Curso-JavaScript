@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            font: normal 20pt roboto;
+            height: 200px;
+            width: 200px;
+            background: blueviolet;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">  ##Evento dentro do HTML para usar nas Function!##
+        Interaja..
+    </div>
+    -->
+    <div id="area">
+        interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        
+        // Disparar eventos usando o addEventListener no JavaScript
+        a.addEventListener('click', clicar)   
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar(){
+            a.innerText = 'Clicou'   
+            a.style.backgroundColor = 'red'      
+        }
+        function entrar(){
+           a.innerText = 'Entrou!' 
+        }
+        function sair(){
+            a.innerText = 'Saíu!'
+            a.style.backgroundColor = 'blueviolet'
+        }
+
+
+    </script>
+</body>
+
+</html>
