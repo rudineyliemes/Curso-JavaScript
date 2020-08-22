@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: royalblue;
+            font: normal 15pt roboto;
+        }
+        .nc  {
+            display: block;  
+                      
+        }
+        .ver {
+            box-shadow: 0px 0px 5px black;
+            
+        }
+        h1 {
+            text-decoration: underline overline;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Seu país!</h1>
+    Digite aqui seu país: <input class="nc" type="text" name="nc" id="nc">
+    <input class="ver" type="button" value="verificar" onclick="verificar()">
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var txtnc = window.document.querySelector('input#nc')
+            var resultado = window.document.querySelector('div#resultado')
+            var nc = String(txtnc.value)
+
+            resultado.innerHTML = (`<p>Você está vivendo no <strong>${nc}</strong></p>`)
+            if (nc == 'brasil') {
+                resultado.innerHTML = (`<p>Você é <strong>Brasileiro!</strong></p>`)
+            } else {
+                resultado.innerHTML = (`<p>Você é <strong>Estrangeiro!</strong></p>`)
+            }
+        }
+    </script>
+</body>
+
+</html>
